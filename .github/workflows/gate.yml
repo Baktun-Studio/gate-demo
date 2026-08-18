@@ -1,0 +1,9 @@
+name: LineBreak Security Gate
+on:
+  pull_request:
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Baktun-Studio/linebreak-gate@v1.10.4
