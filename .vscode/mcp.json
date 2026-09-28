@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "linebreak": {
+      "type": "stdio",
+      "command": "linebreak-gate",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

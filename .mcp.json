@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "linebreak": {
+      "command": "linebreak-gate",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}
