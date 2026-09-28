@@ -10,9 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Baktun-Studio/linebreak-gate@v1.15.0
+      # @v1: la 1.15.0 con las correcciones de main (la organización del servicio
+      # de gobierno da la licencia; la revisión de código con IA usa la llave propia).
+      - uses: Baktun-Studio/linebreak-gate@v1
+        env:
+          LINEBREAK_GOVERNANCE_BASE_URL: ${{ secrets.LINEBREAK_GOVERNANCE_BASE_URL }}
+          LINEBREAK_GOVERNANCE_TOKEN: ${{ secrets.LINEBREAK_GOVERNANCE_TOKEN }}
+          LINEBREAK_GOV_PROJECT: prj_demo_gate_demo
         with:
           stage: pr
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Publicar la corrida en el panel de gobierno
         # Publica en LineBreak Demo (proyecto gate-demo). Nunca bloquea el PR.
         if: always()
