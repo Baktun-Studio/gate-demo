@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "kind": "cve_scan",
+  "id": "security",
+  "summary": "1 finding(s) (1 critical) via osv-scanner.",
+  "scanner": "osv-scanner",
+  "findings": [
+    {
+      "cve_id": "CVE-2020-14343",
+      "severity": "critical",
+      "cvss": 9.8,
+      "package": "pyyaml",
+      "ecosystem": "pypi",
+      "installed_version": "5.3.1",
+      "fixed_version": null,
+      "advisory_url": "https://osv.dev/vulnerability/PYSEC-2021-142",
+      "title": null,
+      "epss": 0.05984,
+      "epss_percentile": 0.93058,
+      "kev": false,
+      "kev_date_added": null,
+      "kev_due_date": null
+    }
+  ],
+  "risk_score": 100,
+  "remediation": null,
+  "approvals": [
+    {
+      "id": "a2056882afdc439085332ab806530238",
+      "role": "approver",
+      "user_email": "presentador@linebreakapp.com",
+      "decision": "override",
+      "notes": "Formato de configuraci\u00f3n heredado: la migraci\u00f3n a PyYAML 6 est\u00e1 planificada y el parser solo lee archivos internos.",
+      "at": "2026-09-28T20:35:35.218733+00:00",
+      "finding": {
+        "id": "dep:pyyaml@5.3.1:CVE-2020-14343",
+        "detector": "dependencies",
+        "package": "pyyaml",
+        "installed_version": "5.3.1",
+        "cve_id": "CVE-2020-14343",
+        "advisory_url": "https://osv.dev/vulnerability/PYSEC-2021-142",
+        "severity": "critical",
+        "title": null
+      },
+      "identity_source": "governance",
+      "identity": {
+        "provider": "governance",
+        "email": "presentador@linebreakapp.com"
+      },
+      "expires": "2026-10-28"
+    }
+  ],
+  "actor": "vladimirlopez",
+  "exploit_intel": {
+    "enabled": true,
+    "checked_at": "2026-09-28T20:35:34Z",
+    "epss": {
+      "available": true,
+      "source": "cache",
+      "as_of": "2026-09-28"
+    },
+    "kev": {
+      "available": true,
+      "source": "cache",
+      "catalog_version": "2026.09.27",
+      "fetched_at": "2026-09-28T18:01:50Z"
+    },
+    "note": null
+  },
+  "verdict": {
+    "passes": false,
+    "block_reasons": [
+      "vulnerability"
+    ]
+  },
+  "generated_at": "2026-09-28T20:35:35.218775+00:00"
+}
