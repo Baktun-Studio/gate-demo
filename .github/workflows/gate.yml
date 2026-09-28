@@ -14,11 +14,11 @@ jobs:
         with:
           stage: pr
       - name: Publicar la corrida en el panel de gobierno
-        # Nunca bloquea el PR: si el servicio no responde, la corrida queda en el repositorio.
+        # Publica en LineBreak Demo (proyecto gate-demo). Nunca bloquea el PR.
         if: always()
         continue-on-error: true
         env:
           LINEBREAK_GOVERNANCE_BASE_URL: ${{ secrets.LINEBREAK_GOVERNANCE_BASE_URL }}
           LINEBREAK_GOVERNANCE_TOKEN: ${{ secrets.LINEBREAK_GOVERNANCE_TOKEN }}
-          LINEBREAK_GOV_PROJECT: prj_0df13d04d52be2c4
+          LINEBREAK_GOV_PROJECT: prj_demo_gate_demo
         run: linebreak-gate publish --stage pr
